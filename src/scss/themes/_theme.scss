@@ -4,20 +4,30 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    font-family: sans-serif;
+    font-family: VisueltPro;
     &:focus,
     &:active{
         outline: none;
     }
 }
-html,
 body{
-    height: 100%;
+    background: #f0f0f0;
+    &.hidden{
+        overflow: hidden;
+    }
 }
 .wrapper{
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    box-shadow: -2px 16px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    margin: 24px;
+    border-radius: 24px;
+    background: #fff;
+    @include media(1200){
+        margin: 8px;
+    }
     .main{
         flex: 1 1 auto;
     }
@@ -26,4 +36,32 @@ button{
     background: none;
     border: none;
     cursor: pointer;
+}
+.btn{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 135%;
+    color: #FFFFFF;
+    background: #4754EB;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms ease;
+    &:hover{
+        background: #505DEC;
+        box-shadow: 0px 15px 24px rgba(80, 93, 236, 0.25);
+        border-radius: 16px;
+    }
+    &:active{
+        background: #3C49DD;
+        box-shadow: 0px 8px 24px rgba(60, 73, 221, 0.1);
+        border-radius: 16px
+    }
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
 }

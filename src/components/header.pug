@@ -1,2 +1,26 @@
 mixin header()
     header.header
+        nav.header__nav.container
+            .header__top
+                .menu.enable-xl
+                    span.menu-btn
+                a(href="index.html").header__logo Инстаботы
+            button(type="button").header__btn.btn.enable-xl.disable-md Вход и регистрация
+            button(type="button").header__button.enable-md
+                img(src="@img/header-icon.png", alt="" draggable="false" loading="lazy")
+            .header__content
+                .header__info.container
+                    ul.header__list 
+                        span.header__subtitle.enable-xl Меню
+                        li.header__li 
+                            a(href="#!").header__link.active О компании
+                        li.header__li 
+                            a(href="#!").header__link Тарифы
+                        li.header__li 
+                            a(href="#!").header__link Отзывы
+                        li.header__li 
+                            a(href="#!").header__link Q&A
+                        li.header__li
+                            a(href="#!").header__link Обратная связь 
+                    p.header__p #[a(href="#!").active Ru] / #[a(href="#!") En]
+                button(type="button").header__btn.btn.disable-xl Вход и регистрация

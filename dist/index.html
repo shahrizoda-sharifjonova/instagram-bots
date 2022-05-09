@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220509193547">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220509211509">
     <title>Document</title>
   </head>
   <body> 
     <div class="wrapper"> 
-            <header class="header"></header>
+            <header class="header">
+              <nav class="header__nav container">
+                <div class="header__top">
+                  <div class="menu enable-xl"><span class="menu-btn"></span></div><a class="header__logo" href="index.html">Инстаботы</a>
+                </div>
+                <button class="header__btn btn enable-xl disable-md" type="button">Вход и регистрация</button>
+                <button class="header__button enable-md" type="button"><picture><source srcset="img/header-icon.webp" type="image/webp"><img src="img/header-icon.png" alt="" draggable="false" loading="lazy"></picture></button>
+                <div class="header__content">
+                  <div class="header__info container">
+                    <ul class="header__list"> <span class="header__subtitle enable-xl">Меню</span>
+                      <li class="header__li"> <a class="header__link active" href="#!">О компании</a></li>
+                      <li class="header__li"> <a class="header__link" href="#!">Тарифы</a></li>
+                      <li class="header__li"> <a class="header__link" href="#!">Отзывы</a></li>
+                      <li class="header__li"> <a class="header__link" href="#!">Q&A</a></li>
+                      <li class="header__li"><a class="header__link" href="#!">Обратная связь </a></li>
+                    </ul>
+                    <p class="header__p"><a class="active" href="#!">Ru</a> / <a href="#!">En</a></p>
+                  </div>
+                  <button class="header__btn btn disable-xl" type="button">Вход и регистрация</button>
+                </div>
+              </nav>
+            </header>
       <div class="main"></div>
             <footer class="footer"></footer>
     </div>
-    <script src="js/app.min.js?_v=20220509193547"> </script>
+    <script src="js/app.min.js?_v=20220509211509"> </script>
   </body>
 </html>

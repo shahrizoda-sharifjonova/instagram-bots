@@ -48,6 +48,10 @@ button{
     align-items: center;
     justify-content: center;
     transition: 300ms ease;
+    @include media(576){
+        font-size: 14px;
+        line-height: 135%;
+    }
     &:hover{
         background: #505DEC;
         box-shadow: 0px 15px 24px rgba(80, 93, 236, 0.25);
@@ -57,6 +61,18 @@ button{
         background: #3C49DD;
         box-shadow: 0px 8px 24px rgba(60, 73, 221, 0.1);
         border-radius: 16px
+    }
+    &_white{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 135%;
+        color: #4754EB;
+        background: #FFFFFF;
+        border-radius: 16px;
+        @include media(576){
+            font-size: 14px;
+            line-height: 135%;
+        }
     }
 }
 ul{

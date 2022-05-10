@@ -4,9 +4,11 @@ mixin intro()
             .intro__content
                 h1.intro__title Высокий уровень вовлечения представителей
                 form(action="#" method="post").intro__form
-                    input(type="email" placeholder="Введите свой e-mail").intro__input
+                    input(type="email" placeholder="Введите свой e-mail" required).intro__input
                     button(type="submit").intro__btn.btn_white Отправить
-                    p.intro__desc Нажимая на кнопку вы соглашаетесь на обработку #[span персональных данных]
+                p.intro__desc Нажимая на кнопку вы соглашаетесь на обработку #[span персональных данных]
                 a(href="#advantages").intro__scroll #[img(src="@img/intro-icon.svg", alt="" draggable="false" loading="lazy")] Листайте дальше
-            .intro__img 
+            .intro__img.disable-xl 
                 img(src="@img/intro-img.png" , alt="" draggable="false" loading="lazy")
+            .intro__img.enable-xl
+                img(src="@img/intro-img_xl.png" , alt="" draggable="false" loading="lazy")

@@ -1,8 +1,22 @@
 .intro{
+    @include media(1200){
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    @include media(576){
+        padding-bottom: 40px;
+    }
     &__body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media(1200){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include media(576){
+            row-gap: 40px;
+        }
     }
     &__title{
         font-weight: 500;
@@ -10,6 +24,15 @@
         line-height: 125%;
         color: #1A1A1A;
         margin-bottom: 40px;
+        @include media(1200){
+            max-width: 800px;
+            width: 100%;
+        }
+        @include media(576){
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 125%;
+        }
     }
     &__form{
         background: rgba(255, 255, 255, 0.5);
@@ -17,11 +40,92 @@
         max-width: 465px;
         width: 100%;
         margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 8px 8px 16px;
+        border: 1px solid;
+        border-image-source: linear-gradient(268.91deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9) 100%);
+        @include media(576){
+            max-width: 100%;
+            padding: 4px 4px 4px 8px;
+        }
     }
     &__input{
         background: none;
         border: none;
         flex: 1 1 auto;
         padding: 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        @include media(576){
+            font-size: 14px;
+            line-height: 135%;
+        }
+        &::placeholder{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 135%;
+            color: #808080;
+            @include media(576){
+                font-size: 14px;
+                line-height: 135%;
+            }
+        }
+    }
+    &__btn{
+        width: 143px;
+        height: 48px;
+        @include media(576){
+            width: 122px;
+            height: 40px;
+        }
+        @include media(375){
+            width: 100px;
+        }
+    }
+    &__desc{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 135%;
+        color: #595959;
+        max-width: 355px;
+        width: 100%;
+        margin-bottom: 126px;
+        @include media(1200){
+            margin-bottom: 0;
+        }
+        @include media(576){
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 135%;
+            max-width: 100%;
+        }
+        span{
+            color: #505dec;
+        }
+    }
+    &__scroll{
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 135%;
+        color: #FFFFFF;
+        @include media(1200){
+            display: none;
+        }
+    }
+    &__img{
+        @include media(992){
+            width: 100%;
+        }
+        img{
+            @include media(992){
+                width: 100%;
+            }
+        }
     }
 }

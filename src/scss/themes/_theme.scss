@@ -24,7 +24,7 @@ body{
     border-radius: 24px;
     margin: 24px;
     border-radius: 24px;
-    background: #fff;
+    background: url(../img/bg.png) top / cover no-repeat;
     @include media(1200){
         margin: 8px;
     }
@@ -64,4 +64,10 @@ ul{
 }
 a{
     text-decoration: none;
+}
+.section{
+    padding: 80px 0;
+    @include media(576){
+        padding: 40px 0;
+    }
 }

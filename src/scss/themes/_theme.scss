@@ -92,5 +92,11 @@ a{
     font-size: 36px;
     line-height: 112%;
     color: #1A1A1A;
-   margin-bottom: 40px; 
+    margin-bottom: 40px;
+        @include media(576){
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 125%;
+            margin-bottom: 30px;
+        } 
 }

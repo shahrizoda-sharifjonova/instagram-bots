@@ -361,6 +361,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
   padding: 8px 8px 8px 16px;
   border: 1px solid;
   border-image-source: linear-gradient(268.91deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9) 100%);
@@ -462,6 +465,41 @@
   -webkit-column-gap: 16px;
      -moz-column-gap: 16px;
           column-gap: 16px;
+}
+
+.advantages__item {
+  background: rgba(249, 249, 249, 0.5);
+  -webkit-box-shadow: 0px 4px 20px rgba(25, 25, 25, 0.05);
+          box-shadow: 0px 4px 20px rgba(25, 25, 25, 0.05);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+  border-radius: 24px;
+}
+
+.advantages__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  color: #1A1A1A;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 12px 16px;
+}
+
+.advantages__desc {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  color: #808080;
+  padding: 16px 25px 25px 25px;
 }
 
 * {
@@ -743,6 +781,18 @@ a {
     display: none;
   }
 
+  .advantages__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .advantages__subtitle {
+    padding: 5px 16px;
+  }
+
   .wrapper {
     margin: 8px;
   }
@@ -781,6 +831,19 @@ a {
 
   .header__btn.enable-lg {
     display: none !important;
+  }
+
+  .advantages__subtitle {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 125%;
+  }
+
+  .advantages__desc {
+    padding: 12px 16px 16px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
   }
 }
 
@@ -904,6 +967,12 @@ a {
     max-width: 100%;
   }
 
+  .advantages__subtitle img {
+    width: 36px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
   .btn {
     font-size: 14px;
     line-height: 135%;
@@ -916,6 +985,13 @@ a {
 
   .section {
     padding: 40px 0;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+    margin-bottom: 30px;
   }
 }
 

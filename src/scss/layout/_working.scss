@@ -1,0 +1,113 @@
+.working{
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 24px;
+        @include media(1200){
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 40px;
+        }
+    }
+    &__texts{
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        @include media(1200){
+            color: #4754EB;
+        }
+        @include media(768){
+            font-size: 14px;
+            line-height: 135%;
+            column-gap: 8px;
+            margin-bottom: 24px;
+        }
+        @include media(374){
+            font-size: 12px;
+        }
+    }
+    &__span{
+        color: #4754EB;
+    }
+    &__line{
+        background: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        display: block;
+        width: 24px;
+        height: 1px;
+        @include media(768){
+            width: 16px;
+        }
+    }
+    &__subtitle{
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 112%;
+        color: #1A1A1A;
+        margin-bottom: 16px;
+        @include media(768){
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 125%;
+            margin-bottom: 8px;
+        }
+    }
+    &__desc{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 135%;
+        color: #4754EB;  
+        margin-bottom: 24px;   
+        @include media(768){
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 135%;
+            margin-bottom: 16px;
+        }   
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        color: #808080;
+        @include media(768){
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 135%;
+        }
+        &_first{
+            margin-bottom: 16px;
+            @include media(768){
+                margin-bottom: 8px;
+            }
+        }
+        &_second{
+            margin-bottom: 71px;
+            @include media(1200){
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &__btn{
+        width: 260px;
+        height: 55px;
+        @include media(375){
+            width: 100%;
+            height: 48px;
+        }
+    }
+    &__img{
+        width: 100%;
+        img{
+            @include media(768){
+                width: 100%;
+            }
+        }
+    }
+}

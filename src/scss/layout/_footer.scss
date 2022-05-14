@@ -1,1 +1,69 @@
-// Футер
+.footer{
+    background: #4754EB;
+    padding: 25px 0;
+    border-radius: 0 0 24px 24px;
+    @include media(576){
+        padding: 16px 0 24px 0;
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        color: #FFFFFF;
+        margin-bottom: 3px;
+        @include media(576){
+            font-size: 14px;
+            line-height: 135%;
+            margin-bottom: 8px;
+        }
+    }
+    &__desc{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 135%;
+        color: #D9D9D9;
+        max-width: 192px;
+        width: 100%;
+        @include media(576){
+            font-size: 14px;
+            line-height: 135%;
+            max-width: 168px;
+            width: 100%;
+        }
+    }
+    &__back{
+        cursor: pointer;
+        display: flex;
+        align-items: flex-start;
+        column-gap: 8px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        color: #FFFFFF;
+        @include media(576){
+            font-size: 14px;
+            line-height: 135%;
+        }
+        &.disable-sm{
+            display: flex !important;
+            @include media(576){
+                display: none !important;
+            }
+        }
+        &.enable-sm{
+            @include media(576){
+                display: flex !important;
+            }
+        }
+        img{
+            @include media(576){
+                height: 16px;
+            }
+        }
+    }
+}

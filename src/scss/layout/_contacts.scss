@@ -1,0 +1,119 @@
+.contacts{
+    background: #FFFFFF;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 163px;
+        @include media(1400){
+            column-gap: 80px;
+        }
+        @include media(1200){
+            column-gap: 0;
+        }
+    }
+    &__title{
+        margin-bottom: 16px !important;
+        @include media(576){
+            margin-bottom: 8px !important;
+        }
+    }
+    &__desc{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        color: #808080;
+        margin-bottom: 24px;
+        @include media(576){
+            font-size: 14px;
+            line-height: 135%;
+            margin-bottom: 16px;
+        }
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__input{
+        background: #F2F2F2;
+        border-radius: 16px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        border: none;
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 16px;
+        @include media(576){
+            font-size: 14px;
+            line-height: 135%;
+        }
+        &::placeholder{
+            color: #808080;
+        }
+    }
+    input{
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    &__textarea{
+        overflow: hidden;
+        resize: none;
+        width: 100%;
+        height: 80px;
+        background: #F2F2F2;
+        border-radius: 16px;
+        padding: 16px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        border: none;
+        margin-bottom: 40px;
+        @include media(576){
+            font-size: 14px;
+            line-height: 135%;
+            height: 64px;
+            padding: 15px 15px 11px 15px;
+        }
+        &::placeholder{
+            color: #808080;
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 24px;
+        @include media(576){
+            flex-direction: column;
+            row-gap: 16px;
+            align-items: flex-start;
+        }
+    }
+    &__btn{
+        width: 203px;
+        height: 56px;
+        @include media(576){
+            width: 170px;
+            height: 48px;
+        }
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 135%;
+        color: #808080;
+        max-width: 240px;
+        width: 100%;
+        span{
+            color: #505DEC;
+        }
+    }
+}

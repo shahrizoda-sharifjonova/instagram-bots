@@ -15,3 +15,16 @@ menu.addEventListener('click', (e)=>{
     menu.classList.toggle('active')
     body.classList.toggle('hidden')
 })
+
+const reviewsBtn = document.querySelector('.reviews__btn');
+const reviewsContent = document.querySelector('.reviews__content');
+
+reviewsBtn.addEventListener('click', (e)=>{
+    reviewsContent.classList.toggle('active')
+    let changed = reviewsBtn.innerHTML="Предыдущий случай";
+    console.log(changed);
+    reviewsBtn.onclick = e => {
+        changed = reviewsBtn.innerHTML="Структурировать котиков";
+        console.log(changed);
+    }
+})

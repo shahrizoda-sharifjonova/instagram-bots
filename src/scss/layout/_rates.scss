@@ -1,0 +1,108 @@
+.rates{
+    background: #FFFFFF;
+    &__title{
+        @include media(1400){
+            margin-bottom: 48px !important;
+        }
+        @include media(768){
+            margin-bottom: 40px !important;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 24px;
+        @include media(1400){
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        @include media(768){
+            row-gap: 16px;
+        }
+    }
+    &__item{
+        background: #FAFAFA;
+        box-shadow: 0px 4px 20px rgba(25, 25, 25, 0.05);
+        backdrop-filter: blur(24px);
+        border-radius: 24px;
+        @include media(1400){
+            width: calc(50% - 12px);
+        }
+        @include media(768){
+            width: 100%;
+        }
+    }
+    &__top{
+        background: rgba(255, 255, 255, 0.5);
+        padding: 20px 24px;
+        border-radius: 24px 24px 0 0;
+        @include media(768){
+            padding: 15px;
+        }
+    }
+    &__subtitle{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: #1A1A1A;
+        margin-bottom: 8px;
+        @include media(768){
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 125%;
+            margin-bottom: 4px;
+        }
+    }
+    &__p{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: #808080;
+        @include media(768){
+            font-size: 18px;
+            line-height: 125%;     
+        }
+        span{
+            color: #4754EB;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        padding: 24px 20px 24px 24px;
+        @include media(768){
+            padding: 16px 24px 16px 16px;
+        }
+    }
+    &__li{
+        display: flex;
+        align-items: flex-start;
+        column-gap: 16px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        color: #808080;
+        @include media(768){
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 135%;
+        }
+        img{
+            @include media(768){
+                width: 24px;
+            }
+        }
+    }
+    &__btn{
+        width: 100%;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media(768){
+            height: 48px;
+            margin-top: 24px;
+        }
+    }
+}

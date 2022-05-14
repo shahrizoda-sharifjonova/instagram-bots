@@ -949,6 +949,124 @@
   color: #505DEC;
 }
 
+.quest__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  row-gap: 16px;
+}
+
+.quest .accordion {
+  width: 100%;
+}
+
+.quest .accordion__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  padding: 24px 32px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 112%;
+  color: #1A1A1A;
+}
+
+.quest .accordion__button.active {
+  border-radius: 16px 16px 0 0;
+}
+
+.quest .accordion__button.active .accordion__abs::before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.quest .accordion__button.active .accordion__abs::after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      -ms-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.quest .accordion__button .accordion__abs {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: -2px 4px 20px rgba(25, 25, 25, 0.025);
+          box-shadow: -2px 4px 20px rgba(25, 25, 25, 0.025);
+  -webkit-backdrop-filter: blur(240px);
+          backdrop-filter: blur(240px);
+  border-radius: 24px;
+  border: 1px solid;
+  border-image-source: linear-gradient(225deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
+}
+
+.quest .accordion__button .accordion__abs::before {
+  content: "";
+  position: absolute;
+  background: #1A1A1A;
+  width: 24px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.quest .accordion__button .accordion__abs::after {
+  content: "";
+  position: absolute;
+  background: #1A1A1A;
+  width: 24px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+      -ms-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.quest .accordion__content {
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: -2px 4px 20px rgba(25, 25, 25, 0.025);
+          box-shadow: -2px 4px 20px rgba(25, 25, 25, 0.025);
+  -webkit-backdrop-filter: blur(240px);
+          backdrop-filter: blur(240px);
+  padding: 16px 48px 24px 24px;
+  border-radius: 0px 0px 16px 16px;
+  display: none;
+}
+
+.quest .accordion__p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  color: #808080;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1549,6 +1667,35 @@ a {
     font-size: 14px;
     line-height: 135%;
   }
+
+  .quest .accordion__button {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 125%;
+    padding: 24px 16px;
+  }
+
+  .quest .accordion__button .accordion__abs {
+    width: 32px;
+    height: 32px;
+  }
+
+  .quest .accordion__button .accordion__abs::before {
+    width: 16px;
+  }
+
+  .quest .accordion__button .accordion__abs::after {
+    width: 16px;
+  }
+
+  .quest .accordion__content {
+    padding: 16px 16px 16px 24px;
+  }
+
+  .quest .accordion__p {
+    font-size: 14px;
+    line-height: 135%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1713,6 +1860,10 @@ a {
 @media (max-width: 374px) {
   .working__texts {
     font-size: 12px;
+  }
+
+  .quest .accordion__button {
+    font-size: 18px;
   }
 }
 

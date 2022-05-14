@@ -1,0 +1,108 @@
+.quest{
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 16px;
+    }
+    .accordion{
+        width: 100%;
+        &__button{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            padding: 24px 32px;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 112%;
+            color: #1A1A1A;
+            @include media(768){
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 125%;
+                padding: 24px 16px;
+            }
+            @include media(374){
+                font-size: 18px;
+            }
+            &.active{
+                border-radius: 16px 16px 0 0;
+                .accordion__abs{
+                    &::before{
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                    &::after{
+                        transform: translate(-50%, -50%) rotate(45deg);
+                    }
+                }
+            }
+            .accordion__abs{
+                width: 48px;
+                height: 48px;
+                background: rgba(255, 255, 255, 0.5);
+                box-shadow: -2px 4px 20px rgba(25, 25, 25, 0.025);
+                backdrop-filter: blur(240px);
+                border-radius: 24px;
+                border: 1px solid;
+                border-image-source: linear-gradient(225deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+                position: relative;
+                @include media(768){
+                    width: 32px;
+                    height: 32px;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background: #1A1A1A;
+                    width: 24px;
+                    height: 2px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: 200ms ease;
+                    @include media(768){
+                        width: 16px;
+                    }
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    background: #1A1A1A;
+                    width: 24px;
+                    height: 2px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(90deg);
+                    transition: 200ms ease;
+                    @include media(768){
+                        width: 16px;
+                    }
+                }
+            }
+        }
+        &__content{
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: -2px 4px 20px rgba(25, 25, 25, 0.025);
+            backdrop-filter: blur(240px);
+            padding: 16px 48px 24px 24px;
+            border-radius: 0px 0px 16px 16px;
+            display: none;
+            @include media(768){
+                padding: 16px 16px 16px 24px;
+            }
+        }
+        &__p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 135%;
+            color: #808080;
+            @include media(768){
+                font-size: 14px;
+                line-height: 135%;
+            }
+        }
+    }
+}

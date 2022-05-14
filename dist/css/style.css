@@ -1286,6 +1286,7 @@
           box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   font-family: VisueltPro;
+  scroll-behavior: smooth;
 }
 
 *:focus,
@@ -1295,7 +1296,6 @@
 
 body {
   background: #f0f0f0;
-  scroll-behavior: smooth;
 }
 
 body.hidden {

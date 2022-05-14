@@ -1,0 +1,86 @@
+.reviews{
+    &__content{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        row-gap: 24px;
+    }
+    &__item{
+        background: #FAFAFA;
+        box-shadow: -2px 4px 20px rgba(25, 25, 25, 0.025);
+        backdrop-filter: blur(240px);
+        border-radius: 16px;
+        max-width: 628px;
+        width: 100%;
+        width: 50%;
+        @include media(1200){
+            max-width: 100%;
+            width: 100%;
+        }
+        &:nth-of-type(1){
+            margin-top: 100px;
+            @include media(1200){
+                margin-top: 0;
+            }
+        }
+        &:nth-of-type(2){
+            margin-left: -302px;
+            z-index: 2;
+            @include media(1200){
+                margin-left: 0;
+            }
+        }
+        &:nth-of-type(3){
+            transform: translateX(165px);
+            @include media(1200){
+                transform: translateX(0);
+            }
+        }
+        &:nth-of-type(4){
+            transform: translateY(-172px);
+            @include media(1200){
+                transform: translateY(0);
+            }
+        }
+    }
+    &__top{
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 16px 16px 0px 0px;
+        padding: 16px 24px 16px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__subtitle{
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: #1A1A1A;
+    }
+    &__info{
+        padding: 16px 24px;
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+        color: #808080;
+        margin-bottom: 16px;
+    }
+    &__button{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -56px;
+        @include media(1200){
+            display: none;
+        }
+    }
+    &__btn{
+        width: 275px;
+        height: 56px;
+    }
+}

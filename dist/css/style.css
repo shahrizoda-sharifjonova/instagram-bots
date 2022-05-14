@@ -1295,6 +1295,7 @@
 
 body {
   background: #f0f0f0;
+  scroll-behavior: smooth;
 }
 
 body.hidden {

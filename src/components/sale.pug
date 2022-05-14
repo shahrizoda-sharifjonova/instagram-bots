@@ -1,0 +1,11 @@
+mixin sale()
+    section.sale 
+        .sale__body.container 
+            .sale__img
+                img(src="@img/sale-img.png", alt="" draggable="false" loading="lazy")
+            .sale__content 
+                h2.sale__title Получите самую выгодную цену на планете
+                form(action="#" method="post").sale__form
+                    input(type="email" placeholder="Введите свой e-mail" required).sale__input
+                    button(type="submit").sale__btn.btn Отправить
+                p.sale__p Нажимая на кнопку вы соглашаетесь на обработку #[span персональных данных]
